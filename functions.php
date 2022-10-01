@@ -6,13 +6,21 @@
  * @package Advanced WordPress Theme Development
  */
 
+use ADVANCED_WORDPRESS_THEME\Inc\ADVANCED_WORDPRESS_THEME;
+
 if (!defined('ADVANCED_WORDPRESS_DIR_PATH')) {
-  define('ADVANCED_WORDPRESS_DIR_PATH', untrailingslashit(get_template_directory() ));
+  define('ADVANCED_WORDPRESS_DIR_PATH', untrailingslashit(get_template_directory()));
 }
 
 require_once ADVANCED_WORDPRESS_DIR_PATH . '/inc/helpers/autoloader.php';
 
-function advanced_theme_enqueue_scripts()
+function advanced_wordpress_theme_instance()
+{
+  \ADVANCED_WORDPRESS_THEME\Inc\ADVANCED_WORDPRESS_THEME::get_instance();
+}
+advanced_wordpress_theme_instance();
+
+function advanced_wordpress_theme_enqueue_scripts()
 {
   // Register Styles
   wp_register_style('style', get_stylesheet_uri(), [], filemtime(get_template_directory() . '/style.css'), 'all');
@@ -30,4 +38,4 @@ function advanced_theme_enqueue_scripts()
   wp_enqueue_script('main');
   wp_enqueue_script('bootstrap');
 }
-add_action('wp_enqueue_scripts', 'advanced_theme_enqueue_scripts');
+add_action('wp_enqueue_scripts', 'advanced_wordpress_theme_enqueue_scripts');
