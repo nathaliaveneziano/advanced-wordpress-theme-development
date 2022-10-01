@@ -6,6 +6,12 @@
  * @package Advanced WordPress Theme Development
  */
 
+if (!defined('ADVANCED_WORDPRESS_DIR_PATH')) {
+  define('ADVANCED_WORDPRESS_DIR_PATH', untrailingslashit(get_template_directory() ));
+}
+
+require_once ADVANCED_WORDPRESS_DIR_PATH . '/inc/helpers/autoloader.php';
+
 function advanced_theme_enqueue_scripts()
 {
   // Register Styles
