@@ -41,5 +41,9 @@ class ADVANCED_WORDPRESS_THEME
       'flex-height' => true,
       'flex-width' => true,
     ]);
+    add_theme_support('custom-background', [
+      'default-color' => '#ffffff',
+      'default-image' => '',
+    ]);
   }
 }
