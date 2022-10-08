@@ -45,5 +45,25 @@ class ADVANCED_WORDPRESS_THEME
       'default-color' => '#ffffff',
       'default-image' => '',
     ]);
+    add_theme_support('post-thumbnails');
+    add_theme_support('customize-selective-refresh-widgets');
+    add_theme_support('automatic-feed-links');
+    add_theme_support('html5', [
+      'search-form',
+      'comment-form',
+      'comment-list',
+      'gallery',
+      'caption',
+      'script',
+      'style',
+    ]);
+    add_editor_style();
+    add_theme_support('wp-block-styles');
+    add_theme_support('align-wide');
+
+    global $content_width;
+    if (!isset($content_width)) {
+      $content_width = 1240;
+    }
   }
 }
