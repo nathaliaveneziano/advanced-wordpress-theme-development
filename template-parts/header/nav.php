@@ -50,3 +50,9 @@
     </div>
   </div>
 </nav>
+<?php
+wp_nav_menu([
+  'theme_location' => 'advanced-theme-header-menu',
+  'container-class' => 'advanced-theme-header-menu',
+]);
+?>
