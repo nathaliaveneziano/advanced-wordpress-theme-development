@@ -12,7 +12,7 @@ get_header();
 <div id="primary">
   <main id="main" class="site-main mt-5" role="main">
     <?php
-    if (have_posts()) {
+    if (have_posts()) :
     ?>
       <div class="container">
         <?php
@@ -41,24 +41,23 @@ get_header();
               <?php
             }
 
-              ?>
-              <h3><?php the_title(); ?></h3>
-              <div><?php the_excerpt(); ?></div>
-              <?php
+            get_template_part('template-parts/content');
 
-              $index++;
+            $index++;
 
-              if ($index !== 0 && $index % $number_columns === 0) {
+            if ($index !== 0 && $index % $number_columns === 0) {
               ?>
               </div>
           <?php
-              }
-            endwhile;
+            }
+          endwhile;
           ?>
         </div>
       </div>
     <?php
-    }
+    else :
+      get_template_part('template-parts/content-none');
+    endif;
     ?>
   </main>
 </div>
