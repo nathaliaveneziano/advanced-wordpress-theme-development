@@ -15,14 +15,10 @@ if (!defined('ADVANCED_WORDPRESS_DIR_URI')) {
 }
 
 require_once ADVANCED_WORDPRESS_DIR_PATH . '/inc/helpers/autoloader.php';
+require_once ADVANCED_WORDPRESS_DIR_PATH . '/inc/helpers/template-tags.php';
 
 function advanced_wordpress_get_theme_instance()
 {
   \ADVANCED_WORDPRESS_THEME\Inc\ADVANCED_WORDPRESS_THEME::get_instance();
 }
 advanced_wordpress_get_theme_instance();
-
-function advanced_wordpress_theme_enqueue_scripts()
-{
-}
-add_action('wp_enqueue_scripts', 'advanced_wordpress_theme_enqueue_scripts');
