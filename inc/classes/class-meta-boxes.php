@@ -28,6 +28,7 @@ class Meta_Boxes
      * Actions.
      */
     add_action('add_meta_boxes', [$this, 'add_custom_meta_box']);
+    add_action('save_post', [$this, 'save_post_meta_data']);
   }
 
   public function add_custom_meta_box()
@@ -51,7 +52,7 @@ class Meta_Boxes
     <label for="advanced-theme-field">
       <?php esc_html_e('Hide the page title', 'advanced-theme'); ?>
     </label>
-    <select name="advanced-theme_field" id="advanced-theme-field" class="postbox">
+    <select name="advanced-theme_hide_title_field" id="advanced-theme-field" class="postbox">
       <option value="">
         <?php esc_html_e('Select', 'advanced-theme'); ?>
       </option>
@@ -63,5 +64,16 @@ class Meta_Boxes
       </option>
     </select>
 <?php
+  }
+
+  public function save_post_meta_data($post_id)
+  {
+    if (array_key_exists('advanced-theme_hide_title_field', $_POST)) {
+      update_post_meta(
+        $post_id,
+        '_hide_page_title',
+        $_POST['advanced-theme_hide_title_field']
+      );
+    }
   }
 }
