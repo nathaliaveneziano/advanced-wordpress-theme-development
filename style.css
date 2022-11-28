@@ -21,6 +21,12 @@ img {
   height: auto;
 }
 
-.update:not(.published) {
+/* Entry meta */
+.updated:not(.published) {
   display: none;
+}
+
+/* Nav item */
+.nav-item:hover .dropdown-menu:not(.show) {
+  display: block;
 }
