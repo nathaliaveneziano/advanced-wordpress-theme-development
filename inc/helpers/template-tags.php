@@ -86,3 +86,16 @@ function advanced_theme_the_excerpt($trim_character_count = 0)
 
   echo $excerpt . '[...]';
 }
+
+function advanced_theme_excerpt_more($more = '')
+{
+  if (!is_single()) {
+    $more = sprintf(
+      '<button class="mt-4 btn btn-primary"><a class="advanced-theme-read-more text-white" href="%1$s">%2$s</a></button>',
+      get_permalink(get_the_ID()),
+      __('Read more', 'advanced-theme')
+    );
+  }
+
+  return $more;
+}

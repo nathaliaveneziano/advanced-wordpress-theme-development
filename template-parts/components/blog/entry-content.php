@@ -24,6 +24,7 @@
     );
   } else {
     advanced_theme_the_excerpt(150);
+    echo advanced_theme_excerpt_more();
   }
   ?>
 </div>
