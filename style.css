@@ -21,6 +21,10 @@ img {
   height: auto;
 }
 
+button a {
+  text-decoration: none;
+}
+
 /* Entry meta */
 .updated:not(.published) {
   display: none;

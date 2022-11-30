@@ -15,6 +15,3 @@ get_header();
   <?php get_template_part('template-parts/components/blog/entry-content'); ?>
   <?php get_template_part('template-parts/components/blog/entry-footer'); ?>
 </article>
-
-<!-- <h3><?php the_title(); ?></h3>
-<div><?php the_excerpt(); ?></div> -->
