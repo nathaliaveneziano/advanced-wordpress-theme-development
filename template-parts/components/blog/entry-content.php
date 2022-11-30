@@ -22,14 +22,14 @@
         the_title('<span class="screen-reader-text">', '</span>', false)
       )
     );
+
+    wp_link_pages([
+      'before' => '<div class="page-links">' . esc_html__('Pages:', 'advanced-theme'),
+      'after' => '</div>',
+    ]);
   } else {
     advanced_theme_the_excerpt(150);
     echo advanced_theme_excerpt_more();
   }
-
-  wp_link_pages([
-    'before' => '<div class="page-links">' . esc_html__('Pages:', 'advanced-theme'),
-    'after' => '</div>',
-  ])
   ?>
 </div>
