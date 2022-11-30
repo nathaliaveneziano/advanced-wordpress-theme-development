@@ -26,5 +26,10 @@
     advanced_theme_the_excerpt(150);
     echo advanced_theme_excerpt_more();
   }
+
+  wp_link_pages([
+    'before' => '<div class="page-links">' . esc_html__('Pages:', 'advanced-theme'),
+    'after' => '</div>',
+  ])
   ?>
 </div>
