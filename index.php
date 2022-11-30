@@ -51,6 +51,8 @@ get_header();
           <?php
             }
           endwhile;
+
+          advanced_theme_pagination();
           ?>
         </div>
       </div>
