@@ -76,6 +76,12 @@ class ADVANCED_WORDPRESS_THEME
       'default-repeat' => 'no-repeat',
     ]);
 
+    add_theme_support('custom-text', [
+      'default-color' => '#ff00ff',
+      'default-image' => '',
+      'default-repeat' => 'no-repeat',
+    ]);
+
     /**
      * Enable suport for Post Thumbnails on posts and pages.
      *

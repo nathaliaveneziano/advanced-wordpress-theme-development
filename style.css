@@ -40,3 +40,17 @@ button a {
   background-color: gray;
   color: white;
 }
+
+
+.screen-reader-text {
+  border: 0;
+  clip: auto;
+  clip-path: none;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  padding: 16px 0;
+  position: relative;
+  width: auto;
+  word-wrap: normal !important;
+}

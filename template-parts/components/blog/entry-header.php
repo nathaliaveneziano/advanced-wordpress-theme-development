@@ -16,7 +16,7 @@ $has_post_thumbnail = get_the_post_thumbnail($the_post_id);
 <header class="entry-header">
   <?php
   // Feature image
-  if (has_post_thumbnail) {
+  if ($has_post_thumbnail) {
   ?>
     <div class="entry-image mb-3">
       <a href="<?= esc_url(get_permalink()); ?>">
